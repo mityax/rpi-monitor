@@ -5,7 +5,7 @@ import os, time, re
 
 
 # ask for .bashrc alias:
-has_asked_for_alias = True  # this value is changed automatically by `set_has_asked_for_alias`
+has_asked_for_alias = False  # this value is changed automatically by `set_has_asked_for_alias`
 bashrc_path = os.path.expanduser('~/.bashrc')
 
 def check_alias_exists():
@@ -26,7 +26,7 @@ def set_has_asked_for_alias(has_asked=True):
 
 def set_alias():
   with open(bashrc_path, 'a+') as f:
-    f.write("\nalias monitor=\"%s\"\n" % os.path.realpath(__file__))
+    f.write("\nalias monitor='python \"%s\"'\n" % os.path.realpath(__file__))
 
 
 # main
@@ -71,4 +71,3 @@ if __name__ == '__main__':
     print(s)
 
     time.sleep(1)
-
