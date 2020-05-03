@@ -15,3 +15,5 @@ the next time.
 
 ![Screenshot](https://raw.githubusercontent.com/mityax/rpi-monitor/master/Screenshot.png)
 
+**Note:** The script should work on all linux systems with python installed (it's usually installed by default).
+The .bashrc alias only works on systems using the bash as default shell. If your system doesn't (as for example LibreElec), you can create a bash alias manually. Just do a quick google search on how to do it.
